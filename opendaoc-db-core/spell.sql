@@ -1,9 +1,12 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
 CREATE TABLE IF NOT EXISTS `spell` (
   `Spell_ID` varchar(255) NOT NULL DEFAULT '',
   `SpellID` int(11) NOT NULL DEFAULT 0,
@@ -52,7 +55,6 @@ CREATE TABLE IF NOT EXISTS `spell` (
   UNIQUE KEY `U_Spell_SpellID` (`SpellID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
-/*!40000 ALTER TABLE `spell` DISABLE KEYS */;
 REPLACE INTO `spell` (`Spell_ID`, `SpellID`, `ClientEffect`, `Icon`, `Name`, `Description`, `Target`, `Range`, `Power`, `CastTime`, `Damage`, `DamageType`, `Type`, `Duration`, `Frequency`, `Pulse`, `PulsePower`, `Radius`, `RecastDelay`, `ResurrectHealth`, `ResurrectMana`, `Value`, `Concentration`, `LifeDrainReturn`, `AmnesiaChance`, `Message1`, `Message2`, `Message3`, `Message4`, `InstrumentRequirement`, `SpellGroup`, `EffectGroup`, `SubSpellID`, `MoveCast`, `Uninterruptible`, `IsPrimary`, `IsSecondary`, `AllowBolt`, `SharedTimerGroup`, `PackageID`, `IsFocus`, `TooltipId`, `LastTimeRowUpdated`) VALUES
 	('', 15001, 4427, 4427, 'Mind Agony', 'Inflicts 35 damage to the target every 4 sec for 24 seconds.', 'Enemy', 1500, 0, 3, 35, 15, 'DamageOverTime', 24, 40, 0, 0, 350, 0, 0, 0, 0, 0, 0, 0, 'Searing pain fills your mind!', '{0} is wracked with pain!', 'Your mental agony fades.', '{0}\'s mental agony fades.', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'MobSpellSpirit', 0, 4427, '2022-06-01 18:50:58'),
 	('1', 1, 1, 1, 'Amethyst Shield', 'Adds 13 to the recipient\'s Armor Factor (AF) resulting in better protection againts some forms of attack. It acts in addition to any armor the target is wearing.', 'Self', 0, 2, 3, 0, 0, 'BaseArmorFactorBuff', 1200, 0, 0, 0, 0, 0, 0, 0, 13, 0, 0, 0, 'A crystal shield covers you.', 'A crystal shield covers {0}\'s skin.', 'Your crystal shield fades.', '{0}\'s crystal shield fades.', 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 'Path_of_Earth_AF', 0, 1, '2000-01-01 00:00:00'),
@@ -4174,11 +4176,11 @@ REPLACE INTO `spell` (`Spell_ID`, `SpellID`, `ClientEffect`, `Icon`, `Name`, `De
 	('991402', 991402, 0, 0, 'Call Cat', 'Summons a cat to travel at your side, but cannot be used in the battlegrounds or the frontier regions.', 'Self', 0, 0, 0, 1, 0, 'SummonNoveltyPet', 65535, 0, 0, 0, 0, 0, 0, 0, 1, 0, 65004, 0, 'A small cat appears as you open a can of tuna.', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'NoveltyPets', 0, 0, '2000-01-01 00:00:00'),
 	('991403', 991403, 0, 0, 'Call Zombie', 'Summons a zombie to travel at your side, but cannot be used in the battlegrounds or the frontier regions.', 'Self', 0, 0, 0, 1, 0, 'SummonNoveltyPet', 65535, 0, 0, 0, 0, 0, 0, 0, 1, 0, 65014, 0, 'A small zombie is lagging their way to you.', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'NoveltyPets', 0, 0, '2000-01-01 00:00:00'),
 	('directdamageheatr2500', 65517, 2303, 0, 'ProcDirectDamageHeat95', 'Damages the target.', 'Enemy', 2500, 0, 2, 95, 13, 'DirectDamage', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, 0, 5901, '2000-01-01 00:00:00'),
-	('longrange', 991339, 0, 0, 'Long Ranged', 'Hits target up to 268 units away.', '', 0, 0, 0, 0, 0, 'StyleRange', 0, 0, 0, 0, 0, 0, 0, 0, 268, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Long_Range', 0, 0, '2000-01-01 00:00:00'),
-	('multitarget1', 991340, 0, 0, 'Hit 2 targets', '', '', 0, 0, 0, 0, 0, 'MultiTarget', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Savage_Multi_Target', 0, 65307, '2000-01-01 00:00:00'),
-	('multitarget2', 991341, 0, 0, 'Hit 3 targets', '', '', 0, 0, 0, 0, 0, 'MultiTarget', 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Savage_Multi_Target', 0, 65308, '2000-01-01 00:00:00'),
-	('multitarget3', 991342, 0, 0, 'Hit 4 targets', '', '', 0, 0, 0, 0, 0, 'MultiTarget', 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Savage_Multi_Target', 0, 65309, '2000-01-01 00:00:00'),
-	('Nature\'sShield', 991343, 0, 0, 'Nature\'s Shield', '', '', 0, 0, 0, 0, 0, 'NaturesShield', 0, 0, 0, 0, 0, 0, 0, 0, 60, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Valewalker_Natures_Shield', 0, 65310, '2000-01-01 00:00:00'),
+	('longrange', 991339, 0, 0, 'Long Ranged', 'Hits target up to 268 units away.', 'Self', 0, 0, 0, 0, 0, 'StyleRange', 0, 0, 0, 0, 0, 0, 0, 0, 268, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Long_Range', 0, 0, '2000-01-01 00:00:00'),
+	('multitarget1', 991340, 0, 0, 'Hit 2 targets', '', 'Self', 0, 0, 0, 0, 0, 'MultiTarget', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Savage_Multi_Target', 0, 65307, '2000-01-01 00:00:00'),
+	('multitarget2', 991341, 0, 0, 'Hit 3 targets', '', 'Self', 0, 0, 0, 0, 0, 'MultiTarget', 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Savage_Multi_Target', 0, 65308, '2000-01-01 00:00:00'),
+	('multitarget3', 991342, 0, 0, 'Hit 4 targets', '', 'Self', 0, 0, 0, 0, 0, 'MultiTarget', 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Savage_Multi_Target', 0, 65309, '2000-01-01 00:00:00'),
+	('Nature\'sShield', 991343, 0, 0, 'Nature\'s Shield', '', 'Self', 0, 0, 0, 0, 0, 'NaturesShield', 0, 0, 0, 0, 0, 0, 0, 0, 100, 0, 0, 0, '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Valewalker_Natures_Shield', 0, 65310, '2000-01-01 00:00:00'),
 	('PaladinCelerity1', 66605, 3235, 3235, 'Celerity', 'Increases the target\'s combat speed.', 'Group', 350, 5, 0, 0, 0, 'CombatSpeedBuff', 8, 50, 1, 6, 0, 8, 0, 0, 24, 0, 0, 0, 'Your attacks move with the speed of the wind!', '{0}\'s attacks move with the speed of the wind!', 'Your attacks return to normal.', '{0}\'s attacks return to normal.', 0, 80, 100, 0, 0, 0, 0, 0, 0, 0, 'Public_DB', 0, 5355, '2000-01-01 00:00:00'),
 	('Pet-DDSnare_whria', 600192, 473, 473, 'Theurge Air Pet DD', 'Target is damaged and also moves slower for the spell duration.', 'Enemy', 1350, 0, 2, 10, 15, 'DamageSpeedDecrease', 30, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 'You are enveloped by numbing cold!', '{0} is enveloped by numbing cold!', 'You can move normally again.', '{0} can move normally again.', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Public_DB', 0, 5373, '2000-01-01 00:00:00'),
 	('Pet-DDSnare_whria_2', 600193, 473, 473, 'Theurge Air Pet DD', 'Target is damaged and also moves slower for the spell duration.', 'Enemy', 1350, 0, 2, 25, 15, 'DamageSpeedDecrease', 30, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 'You are enveloped by numbing cold!', '{0} is enveloped by numbing cold!', 'You can move normally again.', '{0} can move normally again.', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Public_DB', 0, 5373, '2000-01-01 00:00:00'),
@@ -4190,5 +4192,9 @@ REPLACE INTO `spell` (`Spell_ID`, `SpellID`, `ClientEffect`, `Icon`, `Name`, `De
 	('Pet-DDSnare_whria_8', 600199, 473, 473, 'Theurge Air Pet DD', 'Target is damaged and also moves slower for the spell duration.', 'Enemy', 1350, 0, 2, 115, 15, 'DamageSpeedDecrease', 30, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 'You are enveloped by numbing cold!', '{0} is enveloped by numbing cold!', 'You can move normally again.', '{0} can move normally again.', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'Public_DB', 0, 5373, '2000-01-01 00:00:00'),
 	('WeaponSkill/Con4', 300461, 4085, 4085, 'Greater Enervating Poison', 'Decreases Str/Con for a character.', 'Enemy', 1000, 0, 0, 0, 10, 'StrengthConstitutionDebuff', 60, 0, 0, 0, 0, 0, 0, 0, 118, 0, 0, 0, 'You feel weaker!', '{0} seems weaker!', 'Your strength returns.', '{0}\'s strength returns.', 0, 0, 13834, 0, 0, 0, 0, 0, 0, 0, 'Public_DB', 0, 5781, '2000-01-01 00:00:00'),
 	('WeaponSkillConstitutionDebuff', 300311, 4085, 4085, 'Major Enervating Poison', 'Decreases Str/Con for a character.', 'Enemy', 1000, 0, 0, 0, 10, 'StrengthConstitutionDebuff', 60, 0, 0, 0, 0, 0, 0, 0, 91, 0, 0, 0, 'You feel weaker!', '{0} seems weaker!', 'Your strength returns.', '{0}\'s strength returns.', 0, 0, 13834, 0, 0, 0, 0, 0, 0, 0, 'Public_DB', 0, 5783, '2022-06-07 08:21:50');
-/*!40000 ALTER TABLE `spell` ENABLE KEYS */;
 
+/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
