@@ -18,7 +18,6 @@ CREATE TABLE IF NOT EXISTS `lootgenerator` (
 
 /*!40000 ALTER TABLE `lootgenerator` DISABLE KEYS */;
 REPLACE INTO `lootgenerator` (`MobName`, `MobGuild`, `MobFaction`, `RegionID`, `LootGeneratorClass`, `ExclusivePriority`, `LastTimeRowUpdated`, `LootGenerator_ID`) VALUES
-	(NULL, NULL, NULL, 163, 'DOL.GS.LootGeneratorExpOrb', 0, '2000-01-01 00:00:00', 'Atlas Orbs'),
 	(NULL, NULL, NULL, 0, 'DOL.GS.ROGMobGenerator', 0, '2000-01-01 00:00:00', 'Atlas ROGs'),
 	(NULL, NULL, NULL, 0, 'DOL.GS.LootGeneratorMoney', 0, '2000-01-01 00:00:00', 'money'),
 	(NULL, NULL, NULL, 0, 'DOL.GS.LootGeneratorOneTimeDrop', 0, '2000-01-01 00:00:00', 'otd'),
