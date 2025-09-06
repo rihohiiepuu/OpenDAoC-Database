@@ -11,12 +11,10 @@ CREATE TABLE IF NOT EXISTS `timexlevel` (
   `Character_Realm` int(11) NOT NULL DEFAULT 0,
   `Character_Class` text NOT NULL,
   `Character_Level` int(11) NOT NULL DEFAULT 0,
-  `Solo` int(11) NOT NULL DEFAULT 0,
   `Hardcore` int(11) NOT NULL DEFAULT 0,
   `TimeToLevel` text NOT NULL,
   `SecondsToLevel` bigint(20) NOT NULL DEFAULT 0,
   `LastTimeRowUpdated` datetime NOT NULL DEFAULT '2000-01-01 00:00:00',
-  `Boosted` int(11) NOT NULL DEFAULT 0,
   `HoursToLevel` bigint(20) NOT NULL DEFAULT 0,
   PRIMARY KEY (`TimeXLevel_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
