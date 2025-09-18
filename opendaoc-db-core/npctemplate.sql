@@ -1,6 +1,8 @@
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
@@ -51,9 +53,8 @@ CREATE TABLE IF NOT EXISTS `npctemplate` (
   `FactionID` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`NpcTemplate_ID`),
   KEY `I_NpcTemplate_TemplateId` (`TemplateId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
-/*!40000 ALTER TABLE `npctemplate` DISABLE KEYS */;
 REPLACE INTO `npctemplate` (`TemplateId`, `TranslationId`, `Name`, `Suffix`, `ClassType`, `GuildName`, `ExamineArticle`, `MessageArticle`, `Model`, `Gender`, `Size`, `Level`, `MaxSpeed`, `EquipmentTemplateID`, `ItemsListTemplateID`, `Flags`, `MeleeDamageType`, `ParryChance`, `EvadeChance`, `BlockChance`, `LeftHandSwingChance`, `Spells`, `Styles`, `Strength`, `Constitution`, `Dexterity`, `Quickness`, `Intelligence`, `Piety`, `Charisma`, `Empathy`, `Abilities`, `AggroLevel`, `AggroRange`, `Race`, `BodyType`, `TetherRange`, `VisibleWeaponSlots`, `ReplaceMobValues`, `PackageID`, `LastTimeRowUpdated`, `NpcTemplate_ID`, `FactionID`) VALUES
 	(12359, NULL, 'grumoz demon', NULL, 'DOL.GS.GameNPC', NULL, NULL, NULL, '606', 0, '50-58', '10-11', 192, NULL, NULL, 0, 2, 0, 5, 0, 5, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, 90, 500, 2003, 4, 4500, 0, 1, 'Public_DB', '2022-01-25 16:25:23', '001e872a-de78-4c2c-af35-79e6d13d4d3d', 248),
 	(12039, NULL, 'puny skeleton', NULL, 'DOL.GS.GameNPC', NULL, NULL, NULL, '24', 0, '52', '1', 160, NULL, NULL, 0, 1, 0, 5, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, 0, 0, 2009, 11, 4500, 0, 1, 'Public_DB', '2022-01-13 16:13:38', '00309d63-3011-431a-a66f-0e6ae7601cfd', 63),
@@ -12236,11 +12237,11 @@ REPLACE INTO `npctemplate` (`TemplateId`, `TranslationId`, `Name`, `Suffix`, `Cl
 	(68, NULL, 'bone defender', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, '10:3466;bd_armor', NULL, 0, 1, 5, 5, 0, 0, '10304;10305;10306', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-20', 0),
 	(69, NULL, 'bone watchman', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, '10:3466;bd_armor', NULL, 0, 1, 5, 5, 0, 0, '10304;10305;10306', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-21', 0),
 	(70, NULL, 'bone guard', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, '10:3466;bd_armor', NULL, 0, 1, 5, 5, 0, 0, '10304;10305;10306', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-22', 0),
-	(71, NULL, 'bonepatcher', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_armor', NULL, 0, 1, 0, 0, 0, 0, '60100;10308', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-23', 0),
-	(72, NULL, 'bonefixer', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_armor', NULL, 0, 1, 0, 0, 0, 0, '60101;10308', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-24', 0),
-	(73, NULL, 'bonebuilder', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_armor', NULL, 0, 1, 0, 0, 0, 0, '60102;10308', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-25', 0),
-	(74, NULL, 'bonehealer', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_armor', NULL, 0, 1, 0, 0, 0, 0, '60103;10308', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-26', 0),
-	(75, NULL, 'boneknitter', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_armor', NULL, 0, 1, 0, 0, 0, 0, '60104;10308', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-27', 0),
+	(71, NULL, 'bonepatcher', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_armor', NULL, 0, 1, 0, 0, 0, 0, '60105;10308', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-23', 0),
+	(72, NULL, 'bonefixer', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_armor', NULL, 0, 1, 0, 0, 0, 0, '60105;10308', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-24', 0),
+	(73, NULL, 'bonebuilder', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_armor', NULL, 0, 1, 0, 0, 0, 0, '60105;10308', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-25', 0),
+	(74, NULL, 'bonehealer', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_armor', NULL, 0, 1, 0, 0, 0, 0, '60105;10308', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-26', 0),
+	(75, NULL, 'boneknitter', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_armor', NULL, 0, 1, 0, 0, 0, 0, '60105;10308', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-27', 0),
 	(76, NULL, 'bonemender', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_armor', NULL, 0, 1, 0, 0, 0, 0, '60105;10308', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-28', 0),
 	(77, NULL, 'bone dart', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_archer', NULL, 0, 1, 0, 0, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-29', 0),
 	(51, NULL, 'bone commander', NULL, '', '', NULL, NULL, '2220', 0, '55', '0', 200, '10:3463|3466|3469;11:1099;21:3461;bd_armor', NULL, 0, 1, 5, 5, 20, 0, '', '176|22;182|22;161|22;166|22;146|22;149|22', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-3', 0),
@@ -12259,11 +12260,11 @@ REPLACE INTO `npctemplate` (`TemplateId`, `TranslationId`, `Name`, `Suffix`, `Cl
 	(212, NULL, 'dread lich', NULL, 'DOL.GS.GameNPC', NULL, NULL, NULL, '2220', 0, '57', '57-60', 200, '12:3464;21:3461;25:683', NULL, 0, 0, 5, 0, 10, 0, '5440;6209;2610;6518', NULL, 0, 0, 0, 0, 0, 0, 0, 0, NULL, 0, 0, 2009, 11, 0, 0, 0, 'Public_DB', '2022-05-22 10:40:00', 'bd-41', 64),
 	(211, NULL, 'dread archer', NULL, '', '', NULL, NULL, '2220', 0, '57', '0', 200, '10:3463|3466|3469;13:3467;11:1126;21:3461;bd_armor', NULL, 0, 1, 10, 10, 30, 0, '', '157|22;186|22;545|22;221|22', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'Public_DB', '2000-01-01 00:00:00', 'bd-42', 0),
 	(213, NULL, 'dread guardian', NULL, '', '', NULL, NULL, '2220', 0, '57', '0', 200, '12:3464;21:3461;25:683', NULL, 0, 1, 5, 0, 10, 0, '60119', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'Public_DB', '2000-01-01 00:00:00', 'bd-43', 0),
-	(53, NULL, 'bonemage', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_mage', NULL, 0, 1, 0, 0, 0, 0, '60120;60114', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-5', 0),
-	(54, NULL, 'bonecaster', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_mage', NULL, 0, 1, 0, 0, 0, 0, '60121;60115', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-6', 0),
-	(55, NULL, 'bone shaman', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_mage', NULL, 0, 1, 0, 0, 0, 0, '60122;60116', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-7', 0),
-	(56, NULL, 'bone warlock', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_mage', NULL, 0, 1, 0, 0, 0, 0, '60123;60117', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-8', 0),
-	(57, NULL, 'bone diviner', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_mage', NULL, 0, 1, 0, 0, 0, 0, '60124;60118', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-9', 0),
+	(53, NULL, 'bonemage', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_mage', NULL, 0, 1, 0, 0, 0, 0, '60125;60119', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-5', 0),
+	(54, NULL, 'bonecaster', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_mage', NULL, 0, 1, 0, 0, 0, 0, '60125;60119', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-6', 0),
+	(55, NULL, 'bone shaman', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_mage', NULL, 0, 1, 0, 0, 0, 0, '60125;60119', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-7', 0),
+	(56, NULL, 'bone warlock', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_mage', NULL, 0, 1, 0, 0, 0, 0, '60125;60119', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-8', 0),
+	(57, NULL, 'bone diviner', NULL, '', '', NULL, NULL, '920', 0, '45', '0', 200, 'bd_mage', NULL, 0, 1, 0, 0, 0, 0, '60125;60119', '', 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 'bd pet', '2000-01-01 00:00:00', 'bd-9', 0),
 	(209, NULL, 'dread archer', NULL, '', '', NULL, NULL, '2220', 0, '58', '0', 191, '21:3461;22:3461;23:1001;25:999;12:3462;13:3467', NULL, 0, 1, 0, 0, 0, 0, '', NULL, 0, 0, 0, 0, 0, 0, 0, 0, 'Charge|3', 0, 0, 0, 0, 0, 0, 0, NULL, '2000-01-01 00:00:00', 'bd-dread-archer', 0),
 	(207, NULL, 'dread guardian', NULL, '', '', NULL, NULL, '2220', 0, '58', '0', 191, '21:3461;22:3461;23:1001;25:999;10:3463|3466|3469;11:1143;12:3462|3465|3468', NULL, 0, 1, 0, 0, 0, 0, '', NULL, 0, 0, 0, 0, 0, 0, 0, 0, 'Charge|3', 0, 0, 0, 0, 0, 0, 0, NULL, '2000-01-01 00:00:00', 'bd-dread-guardian', 0),
 	(208, NULL, 'dread lich', NULL, 'DOL.GS.GameNPC', NULL, NULL, NULL, '2220', 0, '58', '57-60', 191, '21:3461;22:3461;23:1001;25:999;12:3464', NULL, 0, 0, 0, 0, 0, 0, '5440;6209;2610;6518', NULL, 0, 0, 0, 0, 0, 0, 0, 0, 'Charge|3', 0, 0, 2009, 11, 0, 0, 0, NULL, '2022-05-22 10:39:51', 'bd-dread-lich', 64),
@@ -12992,8 +12993,8 @@ REPLACE INTO `npctemplate` (`TemplateId`, `TranslationId`, `Name`, `Suffix`, `Cl
 	(10112, NULL, 'wood ogre mystic', NULL, 'DOL.GS.GameNPC', NULL, 'the', 'The', '402', 0, '50', '11', 192, NULL, NULL, 0, 1, 0, 0, 0, 0, '1471;86', NULL, 184, 10, 30, 30, 30, 30, 30, 30, NULL, 80, 500, 2004, 5, 4500, 0, 1, 'Public_DB', '2021-12-31 12:28:37', 'woodogremystic', 238),
 	(20022, NULL, 'young fire wyrm', NULL, 'DOL.GS.GameNPC', NULL, NULL, NULL, '1687', 0, '50', '25-27', 200, NULL, NULL, 0, 2, 0, 0, 0, 0, '364;1454;1464', NULL, 189, 30, 30, 30, 30, 30, 30, 30, NULL, 51, 500, 2008, 9, 4500, 0, 1, 'Public_DB', '2022-01-27 17:43:14', 'youngfirewyrm', 136),
 	(121, NULL, 'Wild Pet', NULL, '', NULL, NULL, NULL, '605', 0, '20', '30', 200, '10:0', NULL, 0, 1, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 'CCImmunity', 0, 0, 0, 0, 0, 0, 0, 'Public_DB', '2000-01-01 00:00:00', 'zoarkat', 0);
-/*!40000 ALTER TABLE `npctemplate` ENABLE KEYS */;
 
+/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
